@@ -25,6 +25,8 @@ Route::get('/dashboard', function () {
 
 Route::middleware('auth')->group(function () {
     Route::view('about', 'about')->name('about');
+    Route::view('forms', 'forms')->name('forms');
+    Route::view('tables', 'tables')->name('tables');
 
     Route::get('users', [UserController::class, 'index'])->name('users.index');
 
